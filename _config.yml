@@ -100,7 +100,9 @@ theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+# demo git@github.com:RonRayvon/demo.git
+# online git@github.com:RonRayvon/ron.github.io.git
 deploy:
   type: 'git'
-  repository: 'git@github.com:RonRayvon/ron.github.io.git'
+  repository: 'git@github.com:RonRayvon/demo.git'
   branch: 'master'
