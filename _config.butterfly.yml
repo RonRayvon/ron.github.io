@@ -107,12 +107,11 @@ deploy:
 
 
 nav:
-  logo: /images/background.webp
+  logo: /images/dog.jpeg
   display_title: true
   fixed: false
 
-top_img: /images/dog.jpeg
-index_img: /images/dog.jpeg
+index_img: /images/background.webp
 
 code_blocks:
 # Code block theme: darker / pale night / light / ocean / false
