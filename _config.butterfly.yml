@@ -2,7 +2,8 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site
+
+# Site-Page Config
 title: Ron 博客
 subtitle: '小乌龟快跑'
 description: '记录代码和思考，相信都在变好！'
@@ -10,10 +11,12 @@ keywords:
 author: Ron
 language: zh-CN
 timezone: ''
+date: '2024-10-01'
 
+############################ page config --end########################
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://github.com/RonRayvon
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
