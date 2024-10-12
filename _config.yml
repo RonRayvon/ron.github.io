@@ -4,7 +4,7 @@
 
 # Site
 title: Ron 博客
-subtitle: '小乌龟快跑'
+subtitle: 小乌龟快跑 Ron Ron 博客
 description: '记录代码和思考，相信都在变好！'
 keywords:
 author: Ron
@@ -155,3 +155,18 @@ favicon: /img/avatar.jpeg
 avatar:
   img: /images/dog.jpeg
   effect: false
+
+
+feed:
+  enable: true
+  type: rss2
+  path: rss2.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
