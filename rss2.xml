@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ron 博客</title>
+    <link>http://example.com/</link>
+    
+    <image>
+      <url>http://example.com/icon.png</url>
+      <title>Ron 博客</title>
+      <link>http://example.com/</link>
+    </image>
+    
+    <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>记录代码和思考，相信都在变好！</description>
+    <pubDate>Sat, 12 Oct 2024 14:27:44 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>JavaScript 文件上传校验器</title>
+      <link>http://example.com/2024/10/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+      <guid>http://example.com/2024/10/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+      <pubDate>Sat, 12 Oct 2024 14:27:44 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;&lt;img data-src=&quot;/images/background.webp&quot; alt=&quot;alt text&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;note success&quot;&gt;&lt;figure class=&quot;highlight</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://example.com/categories/WEB/">WEB</category>
+      
+      
+      <category domain="http://example.com/tags/Javascript/">Javascript</category>
+      
+      <category domain="http://example.com/tags/code/">code</category>
+      
+      
+      <comments>http://example.com/2024/10/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>http://example.com/2024/10/12/hello-world/</link>
+      <guid>http://example.com/2024/10/12/hello-world/</guid>
+      <pubDate>Sat, 12 Oct 2024 14:27:44 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="http://example.com/tags/Demo/">Demo</category>
+      
+      
+      <comments>http://example.com/2024/10/12/hello-world/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
