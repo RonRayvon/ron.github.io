@@ -4,31 +4,31 @@
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ron 博客</title>
-    <link>http://example.com/</link>
+    <link>https://ronrayvon.github.io/ron.github.io/</link>
     
     <image>
-      <url>http://example.com/icon.png</url>
+      <url>https://ronrayvon.github.io/ron.github.io/icon.png</url>
       <title>Ron 博客</title>
-      <link>http://example.com/</link>
+      <link>https://ronrayvon.github.io/ron.github.io/</link>
     </image>
     
-    <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://ronrayvon.github.io/ron.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录代码和思考，相信都在变好！</description>
-    <pubDate>Sat, 12 Oct 2024 01:45:48 GMT</pubDate>
+    <pubDate>Tue, 29 Oct 2024 05:02:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>JavaScript 文件上传校验器</title>
-      <link>http://example.com/2024/10/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
-      <guid>http://example.com/2024/10/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
-      <pubDate>Fri, 11 Oct 2024 00:47:02 GMT</pubDate>
+      <link>https://ronrayvon.github.io/ron.github.io/2024/10/29/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+      <guid>https://ronrayvon.github.io/ron.github.io/2024/10/29/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+      <pubDate>Tue, 29 Oct 2024 05:02:48 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;p&gt;&lt;img data-src=&quot;/images/background.webp&quot; alt=&quot;alt text&quot;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img data-src=&quot;/ron.github.io/images/background.webp&quot; alt=&quot;alt text&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;note success&quot;&gt;&lt;figure class=&quot;highlight</description>
           
         
@@ -36,40 +36,44 @@
       
       
       
-      <category domain="http://example.com/categories/WEB/">WEB</category>
+      <category domain="https://ronrayvon.github.io/ron.github.io/categories/WEB/">WEB</category>
       
       
-      <category domain="http://example.com/tags/Javascript/">Javascript</category>
+      <category domain="https://ronrayvon.github.io/ron.github.io/tags/JavaScript/">JavaScript</category>
       
-      <category domain="http://example.com/tags/code/">code</category>
+      <category domain="https://ronrayvon.github.io/ron.github.io/tags/code/">code</category>
       
       
-      <comments>http://example.com/2024/10/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#disqus_thread</comments>
+      <comments>https://ronrayvon.github.io/ron.github.io/2024/10/29/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#disqus_thread</comments>
       
     </item>
     
     <item>
-      <title>Hello World</title>
-      <link>http://example.com/2024/10/10/hello-world/</link>
-      <guid>http://example.com/2024/10/10/hello-world/</guid>
-      <pubDate>Thu, 10 Oct 2024 00:58:59 GMT</pubDate>
+      <title>为异步操作对象提供可取消操作</title>
+      <link>https://ronrayvon.github.io/ron.github.io/2024/10/29/%E4%B8%BA%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C/</link>
+      <guid>https://ronrayvon.github.io/ron.github.io/2024/10/29/%E4%B8%BA%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C/</guid>
+      <pubDate>Tue, 29 Oct 2024 01:38:14 GMT</pubDate>
       
         
         
           
           
-      <description>&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</description>
+      <description>&lt;h2 id=&quot;异步操作对象应该提供可取消操作&quot;&gt;&lt;a href=&quot;#异步操作对象应该提供可取消操作&quot; class=&quot;headerlink&quot;</description>
           
         
       
       
       
       
+      <category domain="https://ronrayvon.github.io/ron.github.io/categories/code/">code</category>
       
-      <category domain="http://example.com/tags/Demo/">Demo</category>
+      
+      <category domain="https://ronrayvon.github.io/ron.github.io/tags/JavaScript/">JavaScript</category>
+      
+      <category domain="https://ronrayvon.github.io/ron.github.io/tags/code/">code</category>
       
       
-      <comments>http://example.com/2024/10/10/hello-world/#disqus_thread</comments>
+      <comments>https://ronrayvon.github.io/ron.github.io/2024/10/29/%E4%B8%BA%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C/#disqus_thread</comments>
       
     </item>
     
