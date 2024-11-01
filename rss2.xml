@@ -15,8 +15,35 @@
     <atom:link href="https://ronrayvon.github.io/ron.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录代码和思考，相信都在变好！</description>
-    <pubDate>Tue, 29 Oct 2024 05:02:48 GMT</pubDate>
+    <pubDate>Fri, 01 Nov 2024 05:34:33 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Linux 机器磁盘清理</title>
+      <link>https://ronrayvon.github.io/ron.github.io/2024/11/01/Linux%E6%9C%BA%E5%99%A8%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/</link>
+      <guid>https://ronrayvon.github.io/ron.github.io/2024/11/01/Linux%E6%9C%BA%E5%99%A8%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/</guid>
+      <pubDate>Fri, 01 Nov 2024 05:24:47 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;Linux-机器磁盘清理&quot;&gt;&lt;a href=&quot;#Linux-机器磁盘清理&quot; class=&quot;headerlink&quot; title=&quot;Linux 机器磁盘清理&quot;&gt;&lt;/a&gt;Linux 机器磁盘清理&lt;/h2&gt;&lt;p&gt;早上收到一份告警，提醒磁盘空间内存占用超过</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://ronrayvon.github.io/ron.github.io/categories/code/">code</category>
+      
+      
+      <category domain="https://ronrayvon.github.io/ron.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://ronrayvon.github.io/ron.github.io/2024/11/01/Linux%E6%9C%BA%E5%99%A8%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>为异步操作对象提供可取消操作</title>
