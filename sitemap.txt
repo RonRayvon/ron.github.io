@@ -1,9 +1,11 @@
-https://ronrayvon.github.io/ron.github.io/2024/11/01/Linux%E6%9C%BA%E5%99%A8%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/
+https://ronrayvon.github.io/ron.github.io/index.html
 https://ronrayvon.github.io/ron.github.io/2024/10/29/%E4%B8%BA%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C/
+https://ronrayvon.github.io/ron.github.io/2024/11/01/Linux%E6%9C%BA%E5%99%A8%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/
+https://ronrayvon.github.io/ron.github.io/2024/11/01/%E7%9C%8B%E7%9C%8B%E6%A0%B7%E5%BC%8F/
 https://ronrayvon.github.io/ron.github.io/categories/index.html
 https://ronrayvon.github.io/ron.github.io/tags/index.html
 https://ronrayvon.github.io/ron.github.io
 https://ronrayvon.github.io/ron.github.io/tags/Linux/
 https://ronrayvon.github.io/ron.github.io/tags/JavaScript/
 https://ronrayvon.github.io/ron.github.io/tags/code/
-https://ronrayvon.github.io/ron.github.io/categories/code/
+https://ronrayvon.github.io/ron.github.io/categories/PROGRAMMING/

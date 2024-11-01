@@ -23,29 +23,25 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"ronrayvon.github.io","root":"/ron.github.io/","images":"/ron.github.io/images","scheme":"Gemini","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":true,"storage":true,"lazyload":false,"nav":null,"Available values":"tabs | buttons"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/ron.github.io/search.xml","localsearch":{"enable":true,"top_n_per_article":10,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/ron.github.io/js/config.js"></script>
 
-    <meta name="description" content="异步操作对象应该提供可取消操作对于异步操作如：异步计算、网络请求、定时器等操作。在条件变更以后，需要将上一次变更触发的异步操作中断抛弃、重新触发新的异步操作。未取消失效的异步操作可能导致几个问题：  数据请求&#x2F;参数变更，数据被错误覆盖。第二个请求返回后，上一次请求迟迟返回将数据覆盖为旧数据。 未取消的异步操作，引发后续监听的处理函数执行。Promise 监听的 resolve。当然 re">
+    <meta name="description" content="记录代码和思考，相信都在变好！">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="为异步操作对象提供可取消操作">
-<meta property="og:url" content="https://ronrayvon.github.io/ron.github.io/2024/10/29/%E4%B8%BA%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="Ron 博客">
+<meta property="og:url" content="https://ronrayvon.github.io/ron.github.io/default-index/index.html">
 <meta property="og:site_name" content="Ron 博客">
-<meta property="og:description" content="异步操作对象应该提供可取消操作对于异步操作如：异步计算、网络请求、定时器等操作。在条件变更以后，需要将上一次变更触发的异步操作中断抛弃、重新触发新的异步操作。未取消失效的异步操作可能导致几个问题：  数据请求&#x2F;参数变更，数据被错误覆盖。第二个请求返回后，上一次请求迟迟返回将数据覆盖为旧数据。 未取消的异步操作，引发后续监听的处理函数执行。Promise 监听的 resolve。当然 re">
+<meta property="og:description" content="记录代码和思考，相信都在变好！">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-29T01:38:14.000Z">
-<meta property="article:modified_time" content="2024-11-01T11:27:31.664Z">
 <meta property="article:author" content="Ron">
-<meta property="article:tag" content="JavaScript">
-<meta property="article:tag" content="code">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://ronrayvon.github.io/ron.github.io/2024/10/29/%E4%B8%BA%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C/">
+<link rel="canonical" href="https://ronrayvon.github.io/ron.github.io/default-index/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ronrayvon.github.io/ron.github.io/2024/10/29/%E4%B8%BA%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C/","path":"2024/10/29/为异步操作对象提供可取消操作/","title":"为异步操作对象提供可取消操作"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"default-index/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>为异步操作对象提供可取消操作 | Ron 博客</title>
+<title>Ron 博客 - 小乌龟快跑 Ron Ron 博客</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFSZK257ZP"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-PFSZK257ZP","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -82,7 +78,7 @@
 
     <a href="/ron.github.io/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Ron 博客</p>
+      <h1 class="site-title">Ron 博客</h1>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">小乌龟快跑 Ron Ron 博客</p>
@@ -137,7 +133,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -150,7 +146,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E5%BA%94%E8%AF%A5%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">异步操作对象应该提供可取消操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AbortController-%E4%B8%8E-AbortSignal-API"><span class="nav-number">2.</span> <span class="nav-text">AbortController 与 AbortSignal API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E6%97%B6%E5%9C%BA%E6%99%AF"><span class="nav-number">2.1.</span> <span class="nav-text">超时场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -204,17 +199,271 @@
 
     </div>
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner index posts-expand">
 
-
-  
+    
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ronrayvon.github.io/ron.github.io/2024/11/01/%E7%9C%8B%E7%9C%8B%E6%A0%B7%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/ron.github.io/images/avatar.gif">
+      <meta itemprop="name" content="Ron">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ron 博客">
+      <meta itemprop="description" content="记录代码和思考，相信都在变好！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Ron 博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ron.github.io/2024/11/01/%E7%9C%8B%E7%9C%8B%E6%A0%B7%E5%BC%8F/" class="post-title-link" itemprop="url">看看样式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-11-01 19:17:54 / 修改时间：19:19:23" itemprop="dateCreated datePublished" datetime="2024-11-01T19:17:54+08:00">2024-11-01</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>952</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Linux-看看样式"><a href="#Linux-看看样式" class="headerlink" title="Linux 看看样式"></a>Linux 看看样式</h2><p>早上收到一份告警，提醒磁盘空间内存占用超过 95%。</p>
+<p>对于前端开发来说，前端大部分的服务是静态资源（React 、Vue 等开发的页面打包构建后产物 css\js\html 以及其他媒体资源和字体等静态资源）并不会占用过多的内存。</p>
+<p>近期使用 strapi 搭建了一个基于node的服务，用于 lowcode 编排的内容的CRUD。本文记录如何清理磁盘。</p>
+<p><img data-src="/ron.github.io/images/67e368da-3205-4fa2-84e9-5f852bc9e475.png" alt="image.png"></p>
+<p>分为三步：查询磁盘占用情况、定位内存暴涨目录、清理内容</p>
+<h2 id="查询磁盘"><a href="#查询磁盘" class="headerlink" title="查询磁盘"></a>查询磁盘</h2><p>命令  <code>df -h</code>     df【disk free】命令用于显示文件系统的磁盘空间使用情况，包括已用空间和可用空间。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">df</span> -h </span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">overlay          20G  19.6G  0    98% /</span><br><span class="line">tmpfs            64M     0   64M   0% /dev</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/fs/cgroup</span><br><span class="line">/dev/md0p3      218G   14G  193G   7% /etc/hosts</span><br><span class="line">shm              64M     0   64M   0% /dev/shm</span><br><span class="line">/dev/md1        3.7T  2.1T  1.7T  56% /etc/hostname</span><br><span class="line">tmpfs           252G   12K  252G   1% /run/secrets/kubernetes.io/serviceaccount</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/acpi</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/scsi</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/firmware</span><br></pre></td></tr></table></figure>
+
+<p>磁盘针对 meta 数据预留的内存是 20G, 内存占用98%。从 overlay 文件系统占用比较大。从这一步定位到告警所在的机器的磁盘占用情况。下一步需要定位到对应的文件夹目录。</p>
+<h2 id="定位到磁盘大内存文件目录"><a href="#定位到磁盘大内存文件目录" class="headerlink" title="定位到磁盘大内存文件目录"></a>定位到磁盘大内存文件目录</h2><p>命令  <code>du -sh * | sort -h</code>  ，命令含义：查询当前目录下一级目录的每个文件和子目录的大小，并按大小排序。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">du</span> -sh * | <span class="built_in">sort</span> -h</span><br></pre></td></tr></table></figure>
+
+<p>查询结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0       sshd</span><br><span class="line">0       sysrd</span><br><span class="line">12K     logger</span><br><span class="line">12K     rd</span><br><span class="line">528M    odin</span><br><span class="line">19.6G    xiaoju</span><br></pre></td></tr></table></figure>
+
+<p>定位是 xiaoju 目录，进入xiaoju文件夹继续查看内存分布。一步到位的命令是 <code>du -h -l</code> 将目录下的所有文件全列出来并标记出文件大小。–max-depth 控制文件目录深度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> xiaoju <span class="comment"># 进入第一步分析出来的大内存占比文件夹下</span></span><br><span class="line"><span class="built_in">du</span> -h -l --max-depth=1  </span><br></pre></td></tr></table></figure>
+
+<p>查询结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">11M     ./opbin</span><br><span class="line">44K     ./meta</span><br><span class="line">861M    ./data1</span><br><span class="line">776M    ./strapi-lowcode-server</span><br><span class="line">44M     ./ep</span><br><span class="line">4.0K    ./statsd-client</span><br><span class="line">24M     ./.npm</span><br><span class="line">213M    ./node-v20.14.0-linux-x64</span><br><span class="line">2.1G    ./.cache</span><br><span class="line">43M     ./.config</span><br><span class="line">0       ./.yarn</span><br><span class="line">15.4G    ./.pm2</span><br><span class="line">788K    ./elvish</span><br><span class="line">230M    ./python3</span><br><span class="line">19.6G    .</span><br></pre></td></tr></table></figure>
+
+<p>看到了大部分内存可清理的范围了 pm2 进程守护，进程日志等占用了15.6G内存，其他就是cache占用2G。定位到原因大概就是 pm2 未配置内存占用大小，看了一下进程日志都不太重要可以进行清理。</p>
+<h2 id="清理大内存目录"><a href="#清理大内存目录" class="headerlink" title="清理大内存目录"></a>清理大内存目录</h2><p>如果是特殊程序运行导致的内存暴涨，则需要考虑将程序迁出，或是将程序运行产物及时同步掉将内存释放（这一步应该做成自动化）。</p>
+<p>对于当前我遇到的场景，只需要将 pm2 进程日志占用的内存 flush 即可。步骤有两点：第一先将机器的 .pm2&#x2F; 下的内存释放掉；第二：修改部署程序脚本，将内存占用限制为5G。</p>
+<p>手动清理日志：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 flush <span class="comment"># 手动清理日志</span></span><br></pre></td></tr></table></figure>
+
+<p> 增加 pm2-logrotate 自动管理日志大小，修改 max_memory_restart 配置项限制内存大小。</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>清理完成后重新查询磁盘占比：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">du</span> -h  -l --max-depth=1</span><br></pre></td></tr></table></figure>
+
+<p>释放掉 10G的内存占用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">11M     ./opbin</span><br><span class="line">44K     ./meta</span><br><span class="line">861M    ./data1</span><br><span class="line">776M    ./strapi-lowcode-server</span><br><span class="line">44M     ./ep</span><br><span class="line">4.0K    ./statsd-client</span><br><span class="line">24M     ./.npm</span><br><span class="line">213M    ./node-v20.14.0-linux-x64</span><br><span class="line">2.1G    ./.cache</span><br><span class="line">43M     ./.config</span><br><span class="line">0       ./.yarn</span><br><span class="line">5.4G    ./.pm2</span><br><span class="line">788K    ./elvish</span><br><span class="line">230M    ./python3</span><br><span class="line">9.6G    .</span><br></pre></td></tr></table></figure>
+
+<p>du -h -l 查看占用情况</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">overlay          20G  9.0G   12G  45% /</span><br><span class="line">tmpfs            64M     0   64M   0% /dev</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/fs/cgroup</span><br><span class="line">/dev/md0p3      218G   14G  193G   7% /etc/hosts</span><br><span class="line">shm              64M     0   64M   0% /dev/shm</span><br><span class="line">/dev/md1        3.7T  2.1T  1.7T  56% /etc/hostname</span><br><span class="line">tmpfs           252G   12K  252G   1% /run/secrets/kubernetes.io/serviceaccount</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/acpi</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/scsi</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/firmware</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ronrayvon.github.io/ron.github.io/2024/11/01/Linux%E6%9C%BA%E5%99%A8%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/ron.github.io/images/avatar.gif">
+      <meta itemprop="name" content="Ron">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ron 博客">
+      <meta itemprop="description" content="记录代码和思考，相信都在变好！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Ron 博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ron.github.io/2024/11/01/Linux%E6%9C%BA%E5%99%A8%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/" class="post-title-link" itemprop="url">Linux 机器磁盘清理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-11-01 13:24:47 / 修改时间：19:27:23" itemprop="dateCreated datePublished" datetime="2024-11-01T13:24:47+08:00">2024-11-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/ron.github.io/categories/PROGRAMMING/" itemprop="url" rel="index"><span itemprop="name">PROGRAMMING</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>954</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Linux-机器磁盘清理"><a href="#Linux-机器磁盘清理" class="headerlink" title="Linux 机器磁盘清理"></a>Linux 机器磁盘清理</h2><p>早上收到一份告警，提醒磁盘空间内存占用超过 95%。</p>
+<p>对于前端开发来说，前端大部分的服务是静态资源（React 、Vue 等开发的页面打包构建后产物 css\js\html 以及其他媒体资源和字体等静态资源）并不会占用过多的内存。</p>
+<p>近期使用 strapi 搭建了一个基于node的服务，用于 lowcode 编排的内容的CRUD。本文记录如何清理磁盘。</p>
+<p><img data-src="/ron.github.io/images/67e368da-3205-4fa2-84e9-5f852bc9e475.png" alt="image.png"></p>
+<p>分为三步：查询磁盘占用情况、定位内存暴涨目录、清理内容</p>
+<h2 id="查询磁盘"><a href="#查询磁盘" class="headerlink" title="查询磁盘"></a>查询磁盘</h2><p>命令  <code>df -h</code>     df【disk free】命令用于显示文件系统的磁盘空间使用情况，包括已用空间和可用空间。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">df</span> -h </span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">overlay          20G  19.6G  0    98% /</span><br><span class="line">tmpfs            64M     0   64M   0% /dev</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/fs/cgroup</span><br><span class="line">/dev/md0p3      218G   14G  193G   7% /etc/hosts</span><br><span class="line">shm              64M     0   64M   0% /dev/shm</span><br><span class="line">/dev/md1        3.7T  2.1T  1.7T  56% /etc/hostname</span><br><span class="line">tmpfs           252G   12K  252G   1% /run/secrets/kubernetes.io/serviceaccount</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/acpi</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/scsi</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/firmware</span><br></pre></td></tr></table></figure>
+
+<p>磁盘针对 meta 数据预留的内存是 20G, 内存占用98%。从 overlay 文件系统占用比较大。从这一步定位到告警所在的机器的磁盘占用情况。下一步需要定位到对应的文件夹目录。</p>
+<h2 id="定位到磁盘大内存文件目录"><a href="#定位到磁盘大内存文件目录" class="headerlink" title="定位到磁盘大内存文件目录"></a>定位到磁盘大内存文件目录</h2><p>命令  <code>du -sh * | sort -h</code>  ，命令含义：查询当前目录下一级目录的每个文件和子目录的大小，并按大小排序。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">du</span> -sh * | <span class="built_in">sort</span> -h</span><br></pre></td></tr></table></figure>
+
+<p>查询结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0       sshd</span><br><span class="line">0       sysrd</span><br><span class="line">12K     logger</span><br><span class="line">12K     rd</span><br><span class="line">528M    odin</span><br><span class="line">19.6G    xiaoju</span><br></pre></td></tr></table></figure>
+
+<p>定位是 xiaoju 目录，进入xiaoju文件夹继续查看内存分布。一步到位的命令是 <code>du -h -l</code> 将目录下的所有文件全列出来并标记出文件大小。–max-depth 控制文件目录深度。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> xiaoju <span class="comment"># 进入第一步分析出来的大内存占比文件夹下</span></span><br><span class="line"><span class="built_in">du</span> -h -l --max-depth=1  </span><br></pre></td></tr></table></figure>
+
+<p>查询结果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">11M     ./opbin</span><br><span class="line">44K     ./meta</span><br><span class="line">861M    ./data1</span><br><span class="line">776M    ./strapi-lowcode-server</span><br><span class="line">44M     ./ep</span><br><span class="line">4.0K    ./statsd-client</span><br><span class="line">24M     ./.npm</span><br><span class="line">213M    ./node-v20.14.0-linux-x64</span><br><span class="line">2.1G    ./.cache</span><br><span class="line">43M     ./.config</span><br><span class="line">0       ./.yarn</span><br><span class="line">15.4G    ./.pm2</span><br><span class="line">788K    ./elvish</span><br><span class="line">230M    ./python3</span><br><span class="line">19.6G    .</span><br></pre></td></tr></table></figure>
+
+<p>看到了大部分内存可清理的范围了 pm2 进程守护，进程日志等占用了15.6G内存，其他就是cache占用2G。定位到原因大概就是 pm2 未配置内存占用大小，看了一下进程日志都不太重要可以进行清理。</p>
+<h2 id="清理大内存目录"><a href="#清理大内存目录" class="headerlink" title="清理大内存目录"></a>清理大内存目录</h2><p>如果是特殊程序运行导致的内存暴涨，则需要考虑将程序迁出，或是将程序运行产物及时同步掉将内存释放（这一步应该做成自动化）。</p>
+<p>对于当前我遇到的场景，只需要将 pm2 进程日志占用的内存 flush 即可。步骤有两点：第一先将机器的 .pm2&#x2F; 下的内存释放掉；第二：修改部署程序脚本，将内存占用限制为5G。</p>
+<p>手动清理日志：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 flush <span class="comment"># 手动清理日志</span></span><br></pre></td></tr></table></figure>
+
+<p> 增加 pm2-logrotate 自动管理日志大小，修改 max_memory_restart 配置项限制内存大小。</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>清理完成后重新查询磁盘占比：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">du</span> -h  -l --max-depth=1</span><br></pre></td></tr></table></figure>
+
+<p>释放掉 10G的内存占用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">11M     ./opbin</span><br><span class="line">44K     ./meta</span><br><span class="line">861M    ./data1</span><br><span class="line">776M    ./strapi-lowcode-server</span><br><span class="line">44M     ./ep</span><br><span class="line">4.0K    ./statsd-client</span><br><span class="line">24M     ./.npm</span><br><span class="line">213M    ./node-v20.14.0-linux-x64</span><br><span class="line">2.1G    ./.cache</span><br><span class="line">43M     ./.config</span><br><span class="line">0       ./.yarn</span><br><span class="line">5.4G    ./.pm2</span><br><span class="line">788K    ./elvish</span><br><span class="line">230M    ./python3</span><br><span class="line">9.6G    .</span><br></pre></td></tr></table></figure>
+
+<p>du -h -l 查看占用情况</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">overlay          20G  9.0G   12G  45% /</span><br><span class="line">tmpfs            64M     0   64M   0% /dev</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/fs/cgroup</span><br><span class="line">/dev/md0p3      218G   14G  193G   7% /etc/hosts</span><br><span class="line">shm              64M     0   64M   0% /dev/shm</span><br><span class="line">/dev/md1        3.7T  2.1T  1.7T  56% /etc/hostname</span><br><span class="line">tmpfs           252G   12K  252G   1% /run/secrets/kubernetes.io/serviceaccount</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/acpi</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/scsi</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/firmware</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://ronrayvon.github.io/ron.github.io/2024/10/29/%E4%B8%BA%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -228,13 +477,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="为异步操作对象提供可取消操作 | Ron 博客">
+      <meta itemprop="name" content="undefined | Ron 博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          为异步操作对象提供可取消操作
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ron.github.io/2024/10/29/%E4%B8%BA%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">为异步操作对象提供可取消操作</a>
+        </h2>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -264,13 +513,6 @@
     </span>
 
   
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -294,7 +536,8 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="异步操作对象应该提供可取消操作"><a href="#异步操作对象应该提供可取消操作" class="headerlink" title="异步操作对象应该提供可取消操作"></a>异步操作对象应该提供可取消操作</h2><p>对于异步操作如：异步计算、网络请求、定时器等操作。在条件变更以后，需要将上一次变更触发的异步操作中断抛弃、重新触发新的异步操作。未取消失效的异步操作可能导致几个问题：</p>
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="异步操作对象应该提供可取消操作"><a href="#异步操作对象应该提供可取消操作" class="headerlink" title="异步操作对象应该提供可取消操作"></a>异步操作对象应该提供可取消操作</h2><p>对于异步操作如：异步计算、网络请求、定时器等操作。在条件变更以后，需要将上一次变更触发的异步操作中断抛弃、重新触发新的异步操作。未取消失效的异步操作可能导致几个问题：</p>
 <ul>
 <li>数据请求&#x2F;参数变更，数据被错误覆盖。第二个请求返回后，上一次请求迟迟返回将数据覆盖为旧数据。</li>
 <li>未取消的异步操作，引发后续监听的处理函数执行。Promise 监听的 resolve。当然 reject 中也应该考虑到Promise 操作被取消异常。</li>
@@ -319,6 +562,7 @@
 
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>模块封装过程中涉及到异步&#x2F;尤其是包含网络请求等场景，都应该提供中止异步，超时中止等基础能力。模块复用和健壮程序需要更多考虑到特殊场景（取消过期请求；中止超时的计算等等）。</p>
 
+      
     </div>
 
     
@@ -326,98 +570,8 @@
     
 
     <footer class="post-footer">
-          <div class="reward-container">
-  <div>请我一杯咖啡吧！</div>
-  <button>
-    赞赏
-  </button>
-  <div class="post-reward">
-      <div>
-        <img src="/ron.github.io/images/dog.jpeg" alt="Ron 微信">
-        <span>微信</span>
-      </div>
-
-  </div>
-</div>
-
-          
-
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>本文作者： </strong>Ron
-  </li>
-  <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://ronrayvon.github.io/ron.github.io/2024/10/29/%E4%B8%BA%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C/" title="为异步操作对象提供可取消操作">https://ronrayvon.github.io/ron.github.io/2024/10/29/为异步操作对象提供可取消操作/</a>
-  </li>
-  <li class="post-copyright-license">
-      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-          <div class="followme">
-  <span>欢迎关注我的其它发布渠道</span>
-
-  <div class="social-list">
-
-      <div class="social-item">
-          <a target="_blank" class="social-link" href="https://x.com/xiaowuguikp">
-            <span class="icon">
-              <i class="fab fa-twitter"></i>
-            </span>
-
-            <span class="label">Twitter</span>
-          </a>
-      </div>
-
-      <div class="social-item">
-          <a target="_blank" class="social-link" href="https://github.com/RonRayvon">
-            <span class="icon">
-              <i class="fab fa-github"></i>
-            </span>
-
-            <span class="label">GitHub</span>
-          </a>
-      </div>
-
-      <div class="social-item">
-          <span class="social-link">
-            <span class="icon">
-              <i class="fab fa-weixin"></i>
-            </span>
-
-            <span class="label">WeChat</span>
-          </span>
-
-          <img class="social-item-img" src="/ron.github.io/images/wechat_channel.jpg">
-      </div>
-  </div>
-</div>
-
-          <div class="post-tags">
-              <a href="/ron.github.io/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
-              <a href="/ron.github.io/tags/code/" rel="tag"><i class="fa fa-tag"></i> code</a>
-          </div>
-
-        
-  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
-    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
-      <a class="a2a_button_facebook"></a>
-      <a class="a2a_button_twitter"></a>
-      <a class="a2a_button_wechat"></a>
-  </div>
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/ron.github.io/2024/11/01/Linux%E6%9C%BA%E5%99%A8%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/" rel="prev" title="Linux 机器磁盘清理">
-                  <i class="fa fa-angle-left"></i> Linux 机器磁盘清理
-                </a>
-            </div>
-            <div class="post-nav-item">
-            </div>
-          </div>
+        <div class="post-eof"></div>
+      
     </footer>
   </article>
 </div>
@@ -426,8 +580,6 @@
 
 
 
-
-    <div class="comments utterances-container"></div>
 </div>
   </main>
 
@@ -527,7 +679,7 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://ronrayvon.github.io/ron.github.io/2024/10/29/%E4%B8%BA%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E5%AF%B9%E8%B1%A1%E6%8F%90%E4%BE%9B%E5%8F%AF%E5%8F%96%E6%B6%88%E6%93%8D%E4%BD%9C/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://ronrayvon.github.io/ron.github.io/default-index/"}</script>
   <script src="/ron.github.io/js/third-party/quicklink.js"></script>
 <script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"RonRayvon/blog_utterances","issue_term":"pathname","theme":"github-light"}</script>
 <script src="/ron.github.io/js/third-party/comments/utterances.js"></script>
