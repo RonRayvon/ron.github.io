@@ -1,50 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>看看样式</title>
-    <url>/ron.github.io/2024/11/01/%E7%9C%8B%E7%9C%8B%E6%A0%B7%E5%BC%8F/</url>
-    <content><![CDATA[<h2 id="Linux-看看样式"><a href="#Linux-看看样式" class="headerlink" title="Linux 看看样式"></a>Linux 看看样式</h2><p>早上收到一份告警，提醒磁盘空间内存占用超过 95%。</p>
-<p>对于前端开发来说，前端大部分的服务是静态资源（React 、Vue 等开发的页面打包构建后产物 css\js\html 以及其他媒体资源和字体等静态资源）并不会占用过多的内存。</p>
-<p>近期使用 strapi 搭建了一个基于node的服务，用于 lowcode 编排的内容的CRUD。本文记录如何清理磁盘。</p>
-<p><img data-src="/ron.github.io/images/67e368da-3205-4fa2-84e9-5f852bc9e475.png" alt="image.png"></p>
-<p>分为三步：查询磁盘占用情况、定位内存暴涨目录、清理内容</p>
-<h2 id="查询磁盘"><a href="#查询磁盘" class="headerlink" title="查询磁盘"></a>查询磁盘</h2><p>命令  <code>df -h</code>     df【disk free】命令用于显示文件系统的磁盘空间使用情况，包括已用空间和可用空间。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">df</span> -h </span><br></pre></td></tr></table></figure>
-
-<p>结果如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">overlay          20G  19.6G  0    98% /</span><br><span class="line">tmpfs            64M     0   64M   0% /dev</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/fs/cgroup</span><br><span class="line">/dev/md0p3      218G   14G  193G   7% /etc/hosts</span><br><span class="line">shm              64M     0   64M   0% /dev/shm</span><br><span class="line">/dev/md1        3.7T  2.1T  1.7T  56% /etc/hostname</span><br><span class="line">tmpfs           252G   12K  252G   1% /run/secrets/kubernetes.io/serviceaccount</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/acpi</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/scsi</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/firmware</span><br></pre></td></tr></table></figure>
-
-<p>磁盘针对 meta 数据预留的内存是 20G, 内存占用98%。从 overlay 文件系统占用比较大。从这一步定位到告警所在的机器的磁盘占用情况。下一步需要定位到对应的文件夹目录。</p>
-<h2 id="定位到磁盘大内存文件目录"><a href="#定位到磁盘大内存文件目录" class="headerlink" title="定位到磁盘大内存文件目录"></a>定位到磁盘大内存文件目录</h2><p>命令  <code>du -sh * | sort -h</code>  ，命令含义：查询当前目录下一级目录的每个文件和子目录的大小，并按大小排序。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">du</span> -sh * | <span class="built_in">sort</span> -h</span><br></pre></td></tr></table></figure>
-
-<p>查询结果如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">0       sshd</span><br><span class="line">0       sysrd</span><br><span class="line">12K     logger</span><br><span class="line">12K     rd</span><br><span class="line">528M    odin</span><br><span class="line">19.6G    xiaoju</span><br></pre></td></tr></table></figure>
-
-<p>定位是 xiaoju 目录，进入xiaoju文件夹继续查看内存分布。一步到位的命令是 <code>du -h -l</code> 将目录下的所有文件全列出来并标记出文件大小。–max-depth 控制文件目录深度。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> xiaoju <span class="comment"># 进入第一步分析出来的大内存占比文件夹下</span></span><br><span class="line"><span class="built_in">du</span> -h -l --max-depth=1  </span><br></pre></td></tr></table></figure>
-
-<p>查询结果：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">11M     ./opbin</span><br><span class="line">44K     ./meta</span><br><span class="line">861M    ./data1</span><br><span class="line">776M    ./strapi-lowcode-server</span><br><span class="line">44M     ./ep</span><br><span class="line">4.0K    ./statsd-client</span><br><span class="line">24M     ./.npm</span><br><span class="line">213M    ./node-v20.14.0-linux-x64</span><br><span class="line">2.1G    ./.cache</span><br><span class="line">43M     ./.config</span><br><span class="line">0       ./.yarn</span><br><span class="line">15.4G    ./.pm2</span><br><span class="line">788K    ./elvish</span><br><span class="line">230M    ./python3</span><br><span class="line">19.6G    .</span><br></pre></td></tr></table></figure>
-
-<p>看到了大部分内存可清理的范围了 pm2 进程守护，进程日志等占用了15.6G内存，其他就是cache占用2G。定位到原因大概就是 pm2 未配置内存占用大小，看了一下进程日志都不太重要可以进行清理。</p>
-<h2 id="清理大内存目录"><a href="#清理大内存目录" class="headerlink" title="清理大内存目录"></a>清理大内存目录</h2><p>如果是特殊程序运行导致的内存暴涨，则需要考虑将程序迁出，或是将程序运行产物及时同步掉将内存释放（这一步应该做成自动化）。</p>
-<p>对于当前我遇到的场景，只需要将 pm2 进程日志占用的内存 flush 即可。步骤有两点：第一先将机器的 .pm2&#x2F; 下的内存释放掉；第二：修改部署程序脚本，将内存占用限制为5G。</p>
-<p>手动清理日志：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pm2 flush <span class="comment"># 手动清理日志</span></span><br></pre></td></tr></table></figure>
-
-<p> 增加 pm2-logrotate 自动管理日志大小，修改 max_memory_restart 配置项限制内存大小。</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>清理完成后重新查询磁盘占比：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">du</span> -h  -l --max-depth=1</span><br></pre></td></tr></table></figure>
-
-<p>释放掉 10G的内存占用</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">11M     ./opbin</span><br><span class="line">44K     ./meta</span><br><span class="line">861M    ./data1</span><br><span class="line">776M    ./strapi-lowcode-server</span><br><span class="line">44M     ./ep</span><br><span class="line">4.0K    ./statsd-client</span><br><span class="line">24M     ./.npm</span><br><span class="line">213M    ./node-v20.14.0-linux-x64</span><br><span class="line">2.1G    ./.cache</span><br><span class="line">43M     ./.config</span><br><span class="line">0       ./.yarn</span><br><span class="line">5.4G    ./.pm2</span><br><span class="line">788K    ./elvish</span><br><span class="line">230M    ./python3</span><br><span class="line">9.6G    .</span><br></pre></td></tr></table></figure>
-
-<p>du -h -l 查看占用情况</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">overlay          20G  9.0G   12G  45% /</span><br><span class="line">tmpfs            64M     0   64M   0% /dev</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/fs/cgroup</span><br><span class="line">/dev/md0p3      218G   14G  193G   7% /etc/hosts</span><br><span class="line">shm              64M     0   64M   0% /dev/shm</span><br><span class="line">/dev/md1        3.7T  2.1T  1.7T  56% /etc/hostname</span><br><span class="line">tmpfs           252G   12K  252G   1% /run/secrets/kubernetes.io/serviceaccount</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/acpi</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/scsi</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/firmware</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
     <title>Linux 机器磁盘清理</title>
     <url>/ron.github.io/2024/11/01/Linux%E6%9C%BA%E5%99%A8%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86/</url>
     <content><![CDATA[<h2 id="Linux-机器磁盘清理"><a href="#Linux-机器磁盘清理" class="headerlink" title="Linux 机器磁盘清理"></a>Linux 机器磁盘清理</h2><p>早上收到一份告警，提醒磁盘空间内存占用超过 95%。</p>
@@ -93,6 +49,50 @@
       <tags>
         <tag>Linux</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>看看样式</title>
+    <url>/ron.github.io/2024/11/01/%E7%9C%8B%E7%9C%8B%E6%A0%B7%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="Linux-看看样式"><a href="#Linux-看看样式" class="headerlink" title="Linux 看看样式"></a>Linux 看看样式</h2><p>早上收到一份告警，提醒磁盘空间内存占用超过 95%。</p>
+<p>对于前端开发来说，前端大部分的服务是静态资源（React 、Vue 等开发的页面打包构建后产物 css\js\html 以及其他媒体资源和字体等静态资源）并不会占用过多的内存。</p>
+<p>近期使用 strapi 搭建了一个基于node的服务，用于 lowcode 编排的内容的CRUD。本文记录如何清理磁盘。</p>
+<p><img data-src="/ron.github.io/images/67e368da-3205-4fa2-84e9-5f852bc9e475.png" alt="image.png"></p>
+<p>分为三步：查询磁盘占用情况、定位内存暴涨目录、清理内容</p>
+<h2 id="查询磁盘"><a href="#查询磁盘" class="headerlink" title="查询磁盘"></a>查询磁盘</h2><p>命令  <code>df -h</code>     df【disk free】命令用于显示文件系统的磁盘空间使用情况，包括已用空间和可用空间。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">df</span> -h </span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">overlay          20G  19.6G  0    98% /</span><br><span class="line">tmpfs            64M     0   64M   0% /dev</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/fs/cgroup</span><br><span class="line">/dev/md0p3      218G   14G  193G   7% /etc/hosts</span><br><span class="line">shm              64M     0   64M   0% /dev/shm</span><br><span class="line">/dev/md1        3.7T  2.1T  1.7T  56% /etc/hostname</span><br><span class="line">tmpfs           252G   12K  252G   1% /run/secrets/kubernetes.io/serviceaccount</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/acpi</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/scsi</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/firmware</span><br></pre></td></tr></table></figure>
+
+<p>磁盘针对 meta 数据预留的内存是 20G, 内存占用98%。从 overlay 文件系统占用比较大。从这一步定位到告警所在的机器的磁盘占用情况。下一步需要定位到对应的文件夹目录。</p>
+<h2 id="定位到磁盘大内存文件目录"><a href="#定位到磁盘大内存文件目录" class="headerlink" title="定位到磁盘大内存文件目录"></a>定位到磁盘大内存文件目录</h2><p>命令  <code>du -sh * | sort -h</code>  ，命令含义：查询当前目录下一级目录的每个文件和子目录的大小，并按大小排序。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">du</span> -sh * | <span class="built_in">sort</span> -h</span><br></pre></td></tr></table></figure>
+
+<p>查询结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">0       sshd</span><br><span class="line">0       sysrd</span><br><span class="line">12K     logger</span><br><span class="line">12K     rd</span><br><span class="line">528M    odin</span><br><span class="line">19.6G    xiaoju</span><br></pre></td></tr></table></figure>
+
+<p>定位是 xiaoju 目录，进入xiaoju文件夹继续查看内存分布。一步到位的命令是 <code>du -h -l</code> 将目录下的所有文件全列出来并标记出文件大小。–max-depth 控制文件目录深度。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> xiaoju <span class="comment"># 进入第一步分析出来的大内存占比文件夹下</span></span><br><span class="line"><span class="built_in">du</span> -h -l --max-depth=1  </span><br></pre></td></tr></table></figure>
+
+<p>查询结果：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">11M     ./opbin</span><br><span class="line">44K     ./meta</span><br><span class="line">861M    ./data1</span><br><span class="line">776M    ./strapi-lowcode-server</span><br><span class="line">44M     ./ep</span><br><span class="line">4.0K    ./statsd-client</span><br><span class="line">24M     ./.npm</span><br><span class="line">213M    ./node-v20.14.0-linux-x64</span><br><span class="line">2.1G    ./.cache</span><br><span class="line">43M     ./.config</span><br><span class="line">0       ./.yarn</span><br><span class="line">15.4G    ./.pm2</span><br><span class="line">788K    ./elvish</span><br><span class="line">230M    ./python3</span><br><span class="line">19.6G    .</span><br></pre></td></tr></table></figure>
+
+<p>看到了大部分内存可清理的范围了 pm2 进程守护，进程日志等占用了15.6G内存，其他就是cache占用2G。定位到原因大概就是 pm2 未配置内存占用大小，看了一下进程日志都不太重要可以进行清理。</p>
+<h2 id="清理大内存目录"><a href="#清理大内存目录" class="headerlink" title="清理大内存目录"></a>清理大内存目录</h2><p>如果是特殊程序运行导致的内存暴涨，则需要考虑将程序迁出，或是将程序运行产物及时同步掉将内存释放（这一步应该做成自动化）。</p>
+<p>对于当前我遇到的场景，只需要将 pm2 进程日志占用的内存 flush 即可。步骤有两点：第一先将机器的 .pm2&#x2F; 下的内存释放掉；第二：修改部署程序脚本，将内存占用限制为5G。</p>
+<p>手动清理日志：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pm2 flush <span class="comment"># 手动清理日志</span></span><br></pre></td></tr></table></figure>
+
+<p> 增加 pm2-logrotate 自动管理日志大小，修改 max_memory_restart 配置项限制内存大小。</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>清理完成后重新查询磁盘占比：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">du</span> -h  -l --max-depth=1</span><br></pre></td></tr></table></figure>
+
+<p>释放掉 10G的内存占用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">11M     ./opbin</span><br><span class="line">44K     ./meta</span><br><span class="line">861M    ./data1</span><br><span class="line">776M    ./strapi-lowcode-server</span><br><span class="line">44M     ./ep</span><br><span class="line">4.0K    ./statsd-client</span><br><span class="line">24M     ./.npm</span><br><span class="line">213M    ./node-v20.14.0-linux-x64</span><br><span class="line">2.1G    ./.cache</span><br><span class="line">43M     ./.config</span><br><span class="line">0       ./.yarn</span><br><span class="line">5.4G    ./.pm2</span><br><span class="line">788K    ./elvish</span><br><span class="line">230M    ./python3</span><br><span class="line">9.6G    .</span><br></pre></td></tr></table></figure>
+
+<p>du -h -l 查看占用情况</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">overlay          20G  9.0G   12G  45% /</span><br><span class="line">tmpfs            64M     0   64M   0% /dev</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/fs/cgroup</span><br><span class="line">/dev/md0p3      218G   14G  193G   7% /etc/hosts</span><br><span class="line">shm              64M     0   64M   0% /dev/shm</span><br><span class="line">/dev/md1        3.7T  2.1T  1.7T  56% /etc/hostname</span><br><span class="line">tmpfs           252G   12K  252G   1% /run/secrets/kubernetes.io/serviceaccount</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/acpi</span><br><span class="line">tmpfs           252G     0  252G   0% /proc/scsi</span><br><span class="line">tmpfs           252G     0  252G   0% /sys/firmware</span><br></pre></td></tr></table></figure>
+]]></content>
   </entry>
   <entry>
     <title>v8引擎系列之解释&amp;编译</title>
