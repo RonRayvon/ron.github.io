@@ -15,8 +15,33 @@
     <atom:link href="https://ronrayvon.github.io/ron.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录代码和思考，相信都在变好！</description>
-    <pubDate>Thu, 14 Nov 2024 01:45:46 GMT</pubDate>
+    <pubDate>Mon, 18 Nov 2024 01:35:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>再重头收拾旧河山</title>
+      <link>https://ronrayvon.github.io/ron.github.io/2024/11/18/%E5%86%8D%E9%87%8D%E5%A4%B4%E6%94%B6%E6%8B%BE%E6%97%A7%E6%B2%B3%E5%B1%B1/</link>
+      <guid>https://ronrayvon.github.io/ron.github.io/2024/11/18/%E5%86%8D%E9%87%8D%E5%A4%B4%E6%94%B6%E6%8B%BE%E6%97%A7%E6%B2%B3%E5%B1%B1/</guid>
+      <pubDate>Mon, 18 Nov 2024 00:09:22 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;这是一篇关于挣扎在泥潭之中的猴子，思考解救自己的碎片。矛盾，拧巴，找到一些方式解救自己，疏于管理和执行力缺乏猴子又重新回到了拧巴，矛盾，这个轮回之中。&lt;br&gt;我需要挣钱用以换去生活所需，又想做自己喜欢的事情。在两者之间找到一条路径–编程。想要靠编程过的更好，在我看来就有非常</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://ronrayvon.github.io/ron.github.io/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/">闲言碎语</category>
+      
+      
+      <comments>https://ronrayvon.github.io/ron.github.io/2024/11/18/%E5%86%8D%E9%87%8D%E5%A4%B4%E6%94%B6%E6%8B%BE%E6%97%A7%E6%B2%B3%E5%B1%B1/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>v8引擎系列之解释&amp;编译</title>
