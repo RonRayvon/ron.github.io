@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ron.github.io/images/dog.jpeg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ron.github.io/images/dog.jpeg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ron.github.io/images/dog.jpeg">
+  <link rel="mask-icon" href="/ron.github.io/images/dog.jpeg" color="#222">
+
+<link rel="stylesheet" href="/ron.github.io/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ronrayvon.github.io","root":"/ron.github.io/","images":"/ron.github.io/images","scheme":"Gemini","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":true,"storage":true,"lazyload":false,"nav":null,"Available values":"tabs | buttons"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/ron.github.io/search.xml","localsearch":{"enable":true,"top_n_per_article":10,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/ron.github.io/js/config.js"></script>
+
+    <meta name="description" content="这是一篇关于挣扎在泥潭之中的猴子，思考解救自己的碎片。矛盾，拧巴，找到一些方式解救自己，疏于管理和执行力缺乏猴子又重新回到了拧巴，矛盾，这个轮回之中。我需要挣钱用以换去生活所需，又想做自己喜欢的事情。在两者之间找到一条路径–编程。想要靠编程过的更好，在我看来就有非常可行的两条路径。其一：跳槽换个公司涨薪，短期可实现30%工资的涨幅。其二：开发一款个人产品，缓慢挣钱。在我看来两种方式各有优势，并且我">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="再重头收拾旧河山">
+<meta property="og:url" content="https://ronrayvon.github.io/ron.github.io/2024/11/18/%E5%86%8D%E9%87%8D%E5%A4%B4%E6%94%B6%E6%8B%BE%E6%97%A7%E6%B2%B3%E5%B1%B1/index.html">
+<meta property="og:site_name" content="Ron 博客">
+<meta property="og:description" content="这是一篇关于挣扎在泥潭之中的猴子，思考解救自己的碎片。矛盾，拧巴，找到一些方式解救自己，疏于管理和执行力缺乏猴子又重新回到了拧巴，矛盾，这个轮回之中。我需要挣钱用以换去生活所需，又想做自己喜欢的事情。在两者之间找到一条路径–编程。想要靠编程过的更好，在我看来就有非常可行的两条路径。其一：跳槽换个公司涨薪，短期可实现30%工资的涨幅。其二：开发一款个人产品，缓慢挣钱。在我看来两种方式各有优势，并且我">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-11-18T00:09:22.000Z">
+<meta property="article:modified_time" content="2025-03-31T02:12:04.812Z">
+<meta property="article:author" content="Ron">
+<meta property="article:tag" content="闲言碎语">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ronrayvon.github.io/ron.github.io/2024/11/18/%E5%86%8D%E9%87%8D%E5%A4%B4%E6%94%B6%E6%8B%BE%E6%97%A7%E6%B2%B3%E5%B1%B1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ronrayvon.github.io/ron.github.io/2024/11/18/%E5%86%8D%E9%87%8D%E5%A4%B4%E6%94%B6%E6%8B%BE%E6%97%A7%E6%B2%B3%E5%B1%B1/","path":"2024/11/18/再重头收拾旧河山/","title":"再重头收拾旧河山"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>再重头收拾旧河山 | Ron 博客</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFSZK257ZP"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-PFSZK257ZP","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/ron.github.io/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/ron.github.io/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/ron.github.io/rss2.xml" title="Ron 博客" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/ron.github.io/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Ron 博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">小乌龟快跑 Ron Ron 博客</p>
+      <img class="custom-logo-image" src="/ron.github.io/images/dog.jpeg" alt="Ron 博客">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/ron.github.io/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/ron.github.io/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a></li><li class="menu-item menu-item-categories"><a href="/ron.github.io/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a></li><li class="menu-item menu-item-archives"><a href="/ron.github.io/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a></li><li class="menu-item menu-item-sitemap"><a href="/ron.github.io/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%81%9A%E6%88%90%E4%B9%8B%E5%89%8D%EF%BC%8C%E4%B8%8D%E8%A6%81%E8%B0%88%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">做成之前，不要谈论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%AB%E5%8F%97%E7%8B%AC%E5%A4%84"><span class="nav-number">2.</span> <span class="nav-text">享受独处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%91%E8%AF%B4%E5%B0%91%E9%94%99%EF%BC%8C%E5%87%8F%E5%B0%91%E6%8A%B1%E6%80%A8"><span class="nav-number">3.</span> <span class="nav-text">少说少错，减少抱怨</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AF%AE%E7%90%83%E5%92%8C%E7%BC%96%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">篮球和编程</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Ron</p>
+  <div class="site-description" itemprop="description">记录代码和思考，相信都在变好！</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/ron.github.io/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/ron.github.io/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/ron.github.io/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/RonRayvon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;RonRayvon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:renyunhong6@gmail.com" title="E-Mail → mailto:renyunhong6@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/xiaowuguikp" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;xiaowuguikp" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ronrayvon.github.io/ron.github.io/2024/11/18/%E5%86%8D%E9%87%8D%E5%A4%B4%E6%94%B6%E6%8B%BE%E6%97%A7%E6%B2%B3%E5%B1%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/ron.github.io/images/avatar.gif">
+      <meta itemprop="name" content="Ron">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ron 博客">
+      <meta itemprop="description" content="记录代码和思考，相信都在变好！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="再重头收拾旧河山 | Ron 博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          再重头收拾旧河山
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-11-18 08:09:22" itemprop="dateCreated datePublished" datetime="2024-11-18T08:09:22+08:00">2024-11-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-03-31 10:12:04" itemprop="dateModified" datetime="2025-03-31T10:12:04+08:00">2025-03-31</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>这是一篇关于挣扎在泥潭之中的猴子，思考解救自己的碎片。矛盾，拧巴，找到一些方式解救自己，疏于管理和执行力缺乏猴子又重新回到了拧巴，矛盾，这个轮回之中。<br>我需要挣钱用以换去生活所需，又想做自己喜欢的事情。在两者之间找到一条路径–编程。想要靠编程过的更好，在我看来就有非常可行的两条路径。其一：跳槽换个公司涨薪，短期可实现30%工资的涨幅。其二：开发一款个人产品，缓慢挣钱。在我看来两种方式各有优势，并且我都浅尝即止，这是个不好的征兆。我曾匆匆准备面试了两家岗位，失败告终；我的两款产品在启动开发后功能达到30%时突然暂停开发，执行力低是一个非常要命的缺点。我发现了~ 我的很多不成事的缺点，一点点改正，再重头收拾旧河山。</p>
+<h2 id="做成之前，不要谈论"><a href="#做成之前，不要谈论" class="headerlink" title="做成之前，不要谈论"></a>做成之前，不要谈论</h2><p>做好决定快速验证并启动。一旦启动只有两个结果，开发完成大功告成，开发完成不及预期。前提一定是 <strong>开发完成</strong>. 按照计划，完完整整的搞定一件事情，这是执行力max。<br>另外一点，做成之前不要和别人谈论它。我的两个产品在设计阶段，已经开始和同事、家人分享，我们谈论其中的可行性，谈论一旦成功会有哪些好处。可是！可是！事情还没做成！！！<br>认真做决定，最好是独处时经过认真思考分析（从当前能看到的各个方面，可行性、成本、预估收益和竞争等等）。一旦下定决心，立即行动。以最大投入推动项目进展，不给自己设置限制（预计1个月开发完成），但是很可能三天就能搞定，我经常给自己设置期限，这是我拖延的原因之一。</p>
+<h2 id="享受独处"><a href="#享受独处" class="headerlink" title="享受独处"></a>享受独处</h2><p>个人独处时，我更能反思自己做的决定，说过的话。哪些是对的？哪些是愚蠢的？思考看见别人做的事情，逻辑是什么？有哪些可以借鉴参考。和别人相处，需要实时响应，回应别人的话题，抖个机灵开心一下，回答又要避免说错话，这些由头都给性能不算好的CPU造成麻烦。</p>
+<p>因此，我需要多制造独处时间。我和夫人养了一只猫。名字叫做“李逵”，是一个胆子很小又粘人的男孩。家里有夫人和猫，在家里是没法做到独处的，因此我的独处是篮球场和公司。在家里享受陪伴，但是控制时间。</p>
+<h2 id="少说少错，减少抱怨"><a href="#少说少错，减少抱怨" class="headerlink" title="少说少错，减少抱怨"></a>少说少错，减少抱怨</h2><p>我还有一份工作，我有一个毛病，对于垃圾代码容忍度非常低。在别人旧代码上做更新时，尤其是写的不合理的代码，我习惯性的嘀咕 “写的什么玩意儿？”。 甚至会给身边同事吐槽，这个代码实现的真是惨不忍睹，来你看看这里写的硬编码，这里又重复实现一遍同样的逻辑，这里写的会触发没必要的计算和更新…。我想我的同事们，因该很反感这种行为吧。是垃圾代码，你重构不就完了吗？每天都在吐槽个啥呢？</p>
+<p>是的，这个毛病已经在纠正了。减少负面情绪流出，我的方法是写到博客&#x2F;树洞笔记里面去，嘴上不说出来。</p>
+<h2 id="篮球和编程"><a href="#篮球和编程" class="headerlink" title="篮球和编程"></a>篮球和编程</h2><p>坚持健身运动大概有三年的时间，疫情原因中断一段时间。22年底当我重新回到健身房，我开始练习游泳；足球；篮球；羽毛球，我是真的参与了。每个项目都是浅尝即止。游泳只会蛙泳，足球练习了一段时间，羽毛球也是如此。没有把一个运动真真的练好。24年10月，我开始意识到我应该认真的训练篮球，其他兴趣暂停。成为某一项运动的专业爱好者，而不是能力非常普通的爱好者。</p>
+<p>开启了篮球专项训练，我开始拆解专项：纠正投篮、练习运球过人…突破、脚步…、跑位和防守等等。训练并不无聊，很多动作自己意识不到，实际是错误的，通过手机在边上录制视频，回看就能发现这个问题，纠正动作再重复练习，查看教程视频。现在投篮动作标准了不少，但是发力仍然不流畅（一段式）。<br>因此我发现：行动 -&gt; 反馈 -&gt; 修正 -&gt; 行动 ~ 这是一个正向循环公式。发现错误&#x2F;负面反馈并不是失败，他只是一个反馈 feedback 。篮球训练我可以通过视频录制的方式来发现问题，编程工作中的反馈搭建就要困难的多。大部分时候我潜意识里面也忽略了这部分反馈！</p>
+<p>如果有一个人经常指出我的问题，我应该要感谢他。但是碍于各种情面，往往都很难得到这种反馈。</p>
+<p>再重头收拾旧河山，这一句非常有气势~ 用来结束这篇碎碎念。重新恢复了 6.40 早起，重新戒断短视频和社交app，精力重新回到编程和篮球上去。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/ron.github.io/images/dog.jpeg" alt="Ron 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Ron
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://ronrayvon.github.io/ron.github.io/2024/11/18/%E5%86%8D%E9%87%8D%E5%A4%B4%E6%94%B6%E6%8B%BE%E6%97%A7%E6%B2%B3%E5%B1%B1/" title="再重头收拾旧河山">https://ronrayvon.github.io/ron.github.io/2024/11/18/再重头收拾旧河山/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://x.com/xiaowuguikp">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/RonRayvon">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <span class="social-link">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </span>
+
+          <img class="social-item-img" src="/ron.github.io/images/wechat_channel.jpg">
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/ron.github.io/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/" rel="tag"><i class="fa fa-tag"></i> 闲言碎语</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/ron.github.io/2024/11/14/v8%E5%BC%95%E6%93%8E%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BC%96%E8%AF%91%E5%92%8C%E4%BC%98%E5%8C%96/" rel="next" title="v8引擎系列之解释&编译">
+                  v8引擎系列之解释&编译 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ron</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">8k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">30 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script size="200" alpha="0.5" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/ron.github.io/js/comments.js"></script><script src="/ron.github.io/js/utils.js"></script><script src="/ron.github.io/js/motion.js"></script><script src="/ron.github.io/js/sidebar.js"></script><script src="/ron.github.io/js/next-boot.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/ron.github.io/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/ron.github.io/js/third-party/fancybox.js"></script>
+
+  <script src="/ron.github.io/js/third-party/pace.js"></script>
+
+  <script src="/ron.github.io/js/third-party/addtoany.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://ronrayvon.github.io/ron.github.io/2024/11/18/%E5%86%8D%E9%87%8D%E5%A4%B4%E6%94%B6%E6%8B%BE%E6%97%A7%E6%B2%B3%E5%B1%B1/"}</script>
+  <script src="/ron.github.io/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"RonRayvon/blog_utterances","issue_term":"pathname","theme":"github-light"}</script>
+<script src="/ron.github.io/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>
